@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100;300;400;500&family=Poppins:wght@100;300;400;500&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: auto;
+}
+header {
+  height: 100vh;
+
+  body {
+    background: #ecf3f3;
+}
+
+.particle {
+	position: absolute;
+ 	border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.particle:nth-child(#{$i}){
+		animation: particle-animation-#{$i} 60s infinite;
+		$size: random(5) + 5 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+	}
+}
+
+  nav {
+    ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        font-family: 'Glory', sans-serif;
+        padding-left: 1.2rem;
+        a {
+          height: 100%;
+          font-size: 1.4rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .sidenav {
+    .head {
+      margin: 0;
+      height: 250px;
+      background-image: url('https://www.infobae.com/new-resizer/S1HZTI_Bsd_sa61nisDumlUv0EA=/1024x512/filters:format(jpg):quality(85)//s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2016/07/05072053/obelisco-1920.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Poppins', sans-serif;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.678);
+        z-index: 0;
+      }
+      .img {
+        background-image: url('../img/head.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        position: relative;
+        top: 25px;
+        left: 25px;
+      }
+
+      h2 {
+        top: 5px;
+        left: 20px;
+        position: relative;
+        color: white;
+        font-size: 1.7rem;
+        z-index: 500;
+      }
+
+      h3 {
+        top: -15px;
+        left: 20px;
+        position: relative;
+        color: white;
+        font-size: 1.1rem;
+        z-index: 500;
+      }
+    }
+  }
+  .header-content {
+    position: relative;
+    top: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+main {
+  width: 100%;
+
+  .about {
+    color: rgb(255, 255, 255);
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .technologies {
+    width: 100%;
+    .flex {
+      display: flex;
+      width: 100%;
+      height: 400px;
+      background-color: red;
+    }
+  }
+}
+
+
+
+  main {
+    .about {
+      height: 400px;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 94.4%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background-color: #3f51b5;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+
+
+.carousel .indicators .indicator-item{
+    background-color: rgb(0, 0, 0);
+    border-radius: 0;
+    transform: rotate(45deg);
+   
+    &.active{
+        background-color: #3f51b5;
+    }
+    
+}
+
+.projects{
+  min-height: 600px;
+  font-family: 'Poppins', sans-serif;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 223%;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #3f51b5;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+}
+  .projects-title{
+    padding-top:50px;
+    color:rgb(255, 255, 255);
+  }
+  .projects-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .project-card{
+      width: 350px;
+      height: 500px;
+      background-color: aliceblue;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .project-card_image{
+        position: relative;
+        top: -30px;
+        width: 70%;
+        height: 220px;
+        background-image: url("https://esp.habitants.org/var/ezwebin_site/storage/images/la_via_urbana/alojar_mil_millones_de_personas2/work_in_progress/2390822-1-ita-IT/work_in_progress.jpg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      h3{
+        color:black;
+        font-size: 2rem;
+      }
+      
+      p{
+        color:rgb(0, 0, 0);
+      }
+      button{
+        margin: 5px;
+        position:relative;
+        top:15px;
+
+        a{
+          color:white;
+        }
+      }
+    }
+  }
+
+
+footer{
+
+  width: 100%;
+  height: 200px;
+  
+  h2{
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  .container-contact{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .contact-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 150px;
+      p{
+        font-size: 1.5rem;
+      }
+      .contact-image{
+        margin-top: 40px;
+        width: 50px;
+        height: 50px;
+
+        background-color: transparent !important;
+        background-size: 100%;
+        background-position: center;
+        border: none;
+        outline:none;
+        cursor: pointer;
+        user-select: none;
+        background-repeat: no-repeat;
+
+        &.linkedin{
+          background-image:url("https://cdn-icons-png.flaticon.com/512/174/174857.png");
+        }
+
+        &.github{
+          background-image:url("https://cdn-icons-png.flaticon.com/512/25/25231.png");
+        }
+        
+        &.email{
+          background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1200px-Gmail_icon_%282020%29.svg.png");
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 991px) {
+    header{
+        h2 span {
+            position: absolute;
+            top: 130px;
+            height: 400px;
+            background: rgb(255, 255, 255);
+            animation: escribir 2s steps(120) alternate;
+        }
+    }
+}
+
