@@ -148,16 +148,6 @@ main {
   main {
     .about {
       height: 400px;
-      &::before{
-        content: '';
-        position: absolute;
-        top: 94.4%;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        background-color: #3f51b5;
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      }
       p {
         font-size: 1.1rem;
       }
@@ -180,16 +170,6 @@ main {
 .projects{
   min-height: 600px;
   font-family: 'Poppins', sans-serif;
-    &::before{
-      content: '';
-      position: absolute;
-      top: 223%;
-      left: 0;
-      width: 40px;
-      height: 40px;
-      background-color: #3f51b5;
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
 }
   .projects-title{
     padding-top:50px;
